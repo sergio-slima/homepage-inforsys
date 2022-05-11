@@ -473,8 +473,31 @@ footer .social-links {
 /* ==== RESPONSIVE ======================= */
 @media (min-width: 1024px) {
   /* GERAL */
+  .wrapper {
+    width: min(112rem, 100%);
+  }
 
   /* NAVIGATION */
 
   /* RESET */
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
 }
