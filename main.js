@@ -4,6 +4,23 @@ onScroll()
 function onScroll() {
   onShowNavOnScroll()
   onShowBackToTopButtonOnScroll()
+
+  activateMenuAtCurrentSection(home)
+}
+
+function activateMenuAtCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2
+
+  //topo da seção
+  const sectionTop = section.offsetTop
+  //altura da seção
+  const sectionHeight = section.offsetHeight
+  // o topo da seção chegou ou ultrapassou a linha alvo
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+  // seção termina
+  const sectionEndsAt = sectionTop + sectionHeight
+
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
 }
 
 function onShowNavOnScroll() {
