@@ -2,41 +2,56 @@ window.addEventListener('scroll', onScroll)
 
 onScroll()
 function onScroll() {
-  onShowNavOnScroll()
-  onShowBackToTopButtonOnScroll()
+  showNavOnScroll()
+  showBackToTopButtonOnScroll()
 
   activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
 }
 
 function activateMenuAtCurrentSection(section) {
   const targetLine = scrollY + innerHeight / 2
 
-  //topo da seção
+  // verificar se a seção passou da linha
+  // quais dados vou precisar?
   const sectionTop = section.offsetTop
-  //altura da seção
   const sectionHeight = section.offsetHeight
-  // o topo da seção chegou ou ultrapassou a linha alvo
-  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
-  // seção termina
-  const sectionEndsAt = sectionTop + sectionHeight
+  const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
 
-  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
+  // verificar se a base está abaixo da linha alvo
+
+  const sectionEndsAt = sectionTop + sectionHeight
+  const sectionEndPassedTargetline = sectionEndsAt <= targetLine
+
+  // limites da seção
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  if (sectionBoundaries) {
+    menuElement.classList.add('active')
+  }
 }
 
-function onShowNavOnScroll() {
+function showNavOnScroll() {
   if (scrollY > 0) {
     navigation.classList.add('scroll')
   } else {
     navigation.classList.remove('scroll')
-  } 
+  }
 }
 
-function onShowBackToTopButtonOnScroll() {
-  if (scrollY > 400) {
+function showBackToTopButtonOnScroll() {
+  if (scrollY > 550) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
-  } 
+  }
 }
 
 function openMenu() {
@@ -50,15 +65,14 @@ function closeMenu() {
 ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700,
+  duration: 700
 }).reveal(`
-    #home,
-    #home img,
-    #home .stats,
-    #services,
-    #services header,
-    #services .card,
-    #about,
-    #about header,
-    #about .content
-`)
+  #home, 
+  #home img, 
+  #home .stats, 
+  #services,
+  #services header,
+  #services .card
+  #about, 
+  #about header, 
+  #about .content`)
