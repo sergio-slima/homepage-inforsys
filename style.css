@@ -625,7 +625,7 @@ footer .social-links {
 
   /* HOME */
   #home::before {
-    height: calc(90% - var(--nav-height));
+    height: calc(112% - var(--nav-height));
   }
   #home {
     padding-top: var(--nav-height);
