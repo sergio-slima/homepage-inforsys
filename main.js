@@ -77,3 +77,14 @@ ScrollReveal({
   #about, 
   #about header, 
   #about .content`)
+
+  // function mostrar(e) {
+  //   if (e.classList.contains("glyphicon-eye-open")) { //se tem olho aberto
+  //     e.classList.remove("glyphicon-eye-open"); //remove classe olho aberto
+  //     e.classList.add("glyphicon-eye-close"); //coloca classe olho fechado
+  //   } else { //senão
+  //     e.classList.remove("glyphicon-eye-close"); //remove classe olho fechado
+  //     e.classList.add("glyphicon-eye-open"); //coloca classe olho aberto
+  //   }
+
+  // }
