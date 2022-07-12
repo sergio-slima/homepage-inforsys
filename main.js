@@ -1,4 +1,5 @@
 window.addEventListener('scroll', onScroll)
+const $html = document.querySelector('html')
 
 onScroll()
 function onScroll() {
@@ -78,13 +79,11 @@ ScrollReveal({
   #about header, 
   #about .content`)
 
-  // function mostrar(e) {
-  //   if (e.classList.contains("glyphicon-eye-open")) { //se tem olho aberto
-  //     e.classList.remove("glyphicon-eye-open"); //remove classe olho aberto
-  //     e.classList.add("glyphicon-eye-close"); //coloca classe olho fechado
-  //   } else { //senão
-  //     e.classList.remove("glyphicon-eye-close"); //remove classe olho fechado
-  //     e.classList.add("glyphicon-eye-open"); //coloca classe olho aberto
-  //   }
+  function mostrar(e) {
+    if ($html.classList.contains('dark-mode')) {
+      $html.classList.remove('dark-mode')
+    } else { //senão
+      $html.classList.add('dark-mode')
+    }
 
-  // }
+  }
