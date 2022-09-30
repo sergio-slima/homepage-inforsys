@@ -6,9 +6,10 @@
 }
 
 :root {
-  --hue: 210;  /* 210 */
+  --hue: 225;
+  /* 210 */
 
-  --primary-color: hsl(var(--hue), 100%, 26%);
+  --primary-color: hsl(var(--hue), 61%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
 
@@ -19,13 +20,14 @@
 
   --bg-light: hsl(180, 14%, 97%);
 
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
+  /* 1rem = 10px */
 
   --nav-height: 7.2rem;
 }
 
 .dark-mode:root {
-  --primary-color: hsl(var(--hue), 100%, 36%);
+  --primary-color: hsl(var(--hue), 61%, 36%);
   --headline: hsl(210, 11%, 95%);
   --paragraph: hsl(210, 9%, 81%);
 
@@ -34,7 +36,7 @@
   --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
   --brand-dark: hsl(var(--hue), 100%, 14%);
 
-  --bg-light: hsl(180, 14%, 20%); 
+  --bg-light: hsl(180, 14%, 20%);
 }
 
 html {
@@ -151,7 +153,8 @@ section .content p {
   fill: var(--brand-light);
 }
 
-#navigation .logo path,     /*exemplo de contém: path[fill*="#00856F]*/
+#navigation .logo path,
+/*exemplo de contém: path[fill*="#00856F]*/
 #backToTopButton circle {
   fill: var(--primary-color);
 }
@@ -204,12 +207,24 @@ nav .close-menu {
   position: fixed;
 }
 
+nav button.btn-dark svg {
+  fill: var(--primary-color);
+}
+
+nav button.btn-dark circle {
+  fill: var(--primary-color);
+}
+
+nav img {
+  width: 4rem;
+}
+
 /* ==== NAVIGATION EXPANDED ======================= */
 body.menu-expanded {
   overflow: hidden;
 }
 
-body.menu-expanded > :not(nav) {
+body.menu-expanded> :not(nav) {
   visibility: hidden;
 }
 
@@ -487,6 +502,7 @@ footer .social-links {
 
 /* ==== RESPONSIVE ======================= */
 @media (min-width: 1024px) {
+
   /* GERAL */
   body {
     overflow: auto;
@@ -640,13 +656,14 @@ footer .social-links {
   #home::before {
     height: calc(112% - var(--nav-height));
   }
+
   #home {
     padding-top: var(--nav-height);
   }
 
   #home .wrapper {
     grid-template-columns: 60.5rem 1fr;
-    grid-template-areas: 'A B' 'C C';
+    grid-template-areas: 'A B''C C';
   }
 
   #home .col-a {
@@ -670,7 +687,7 @@ footer .social-links {
     gap: 0;
   }
 
-  #home .stats .stat + .stat {
+  #home .stats .stat+.stat {
     border-left: 1px solid var(--primary-color);
   }
 
