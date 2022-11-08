@@ -19,7 +19,7 @@ Página institucional da Inforsys, um site para manter um canal de contato com t
 <br>
 
 <p align="center">
-  <img alt="Logo da Inforsys" src="./downloads/logo-inforsys/Inforsys01.png" width="75%">
+  <img alt="Logo da Inforsys" src="./downloads/logo-inforsys/Inforsys01.png" width="30%">
 </p>
 
 ## 🚀 Tecnologias
