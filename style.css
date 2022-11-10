@@ -468,6 +468,26 @@ body.menu-expanded nav#navigation .menu a.button.suporte {
   margin-bottom: 6rem;
 }
 
+/* ==== TEAM ======================= */
+#team .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* #team .card:hover {
+  transform: scale(1.1);
+}
+
+#team .card {
+  transition: transform 0.3s;
+}
+
+#team .card {
+  opacity: 0;
+  animation: appear 1s forwards;
+} */
+
 /* ==== CONTACT ======================= */
 #contact {
   text-align: left;
@@ -821,6 +841,13 @@ footer .social-links {
 
   #about .content p {
     margin-bottom: 0;
+  }
+
+  /* TEAM */
+  #team .cards {
+    max-width: 1010px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   /* CONTACT */
