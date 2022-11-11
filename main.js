@@ -2,9 +2,11 @@ window.addEventListener('scroll', onScroll)
 const $html = document.querySelector('html')
 
 onScroll()
-function onScroll() {
-  showNavOnScroll()
+
+function onScroll() { 
+
   showBackToTopButtonOnScroll()
+  showNavOnScroll()
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
@@ -64,26 +66,29 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
-ScrollReveal({
+/* ScrollReveal: Mostrar elementos quando der scroll na página */
+const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700
-}).reveal(`
-  #home, 
-  #home img, 
-  #home .stats, 
-  #services,
-  #services header,
-  #services .card
-  #about, 
-  #about header, 
-  #about .content`)
+  duration: 300,
+  reset: true
+})
 
-  function mostrar(e) {
-    if ($html.classList.contains('dark-mode')) {
-      $html.classList.remove('dark-mode')
-    } else { //senão
-      $html.classList.add('dark-mode')
-    }
+scrollReveal.reveal(
+  `#home header, #home img, #home .stats, #home .stat,
+  #services header, #services .card,
+  #about header, #about .content,
+  #contact header, #contact .content, #contatct img,
+  footer svg, footer p, footer .social-links
+  `,
+  { interval: 100 }
+)
 
+function mostrar(e) {
+  if ($html.classList.contains('dark-mode')) {
+    $html.classList.remove('dark-mode')
+  } else { //senão
+    $html.classList.add('dark-mode')
   }
+
+}
