@@ -70,16 +70,15 @@ function closeMenu() {
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 300,
+  duration: 700,
   reset: true
 })
 
 scrollReveal.reveal(
-  `#home header, #home img, #home .stats, #home .stat,
+  `#home header, #home .content, #home img, #home .stats, #home .stat,
   #services header, #services .card,
-  #about header, #about .content,
-  #contact header, #contact .content, #contatct img,
-  footer svg, footer p, footer .social-links
+  #about img, #about header, #about .content,
+  #contact header, #contact .content, #contact iframe
   `,
   { interval: 100 }
 )
@@ -90,5 +89,10 @@ function mostrar(e) {
   } else { //senão
     $html.classList.add('dark-mode')
   }
-
 }
+
+// Atualizando ano atual
+const ano = document.getElementById("ano");
+const anoAtual = new Date();
+
+ano.innerHTML = anoAtual.getFullYear();
