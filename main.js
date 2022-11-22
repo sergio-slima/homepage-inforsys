@@ -78,10 +78,21 @@ scrollReveal.reveal(
   `#home header, #home .content, #home img, #home .stats, #home .stat,
   #services header, #services .card,
   #about img, #about header, #about .content,
-  #contact header, #contact .content, #contact iframe
+  #contact header, #contact .content, #contact iframe,
+  #team header, #team .swiper
   `,
   { interval: 100 }
 )
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 function mostrar(e) {
   if ($html.classList.contains('dark-mode')) {
