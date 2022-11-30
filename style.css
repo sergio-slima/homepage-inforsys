@@ -221,6 +221,10 @@ nav button {
   cursor: pointer;
 }
 
+nav .button {
+  cursor: pointer;
+}
+
 nav .menu,
 nav .close-menu {
   position: fixed;

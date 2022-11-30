@@ -85,13 +85,23 @@ scrollReveal.reveal(
 )
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
+  slidesPerView: 2,
+  spaceBetween: 10,
   loop: true,  
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 60,
+    }
+  }
 });
 
 function mostrar(e) {
@@ -107,3 +117,16 @@ const ano = document.getElementById("ano");
 const anoAtual = new Date();
 
 ano.innerHTML = anoAtual.getFullYear();
+
+// Modal Boleto
+const btnBoleto = document.querySelector(".boleto")
+const modal = document.querySelector("dialog")
+const btnClose = document.querySelector("dialog .closeModal")
+
+btnBoleto.onclick = function() {  
+  modal.showModal()
+}
+
+btnClose.onclick = function() {
+  modal.close()
+}
