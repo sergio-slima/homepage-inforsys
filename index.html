@@ -79,42 +79,6 @@
         </ul>
 
         <a class="button boleto" id="open-modal">Boleto</a>
-        <!-- Tela Modal do Boleto -->
-        <div id="fadel" class="hide"></div>
-        <div id="modal" class="hide">
-          <div class="modal-header">
-            <svg class="logo-inforsys" width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="33" cy="33" r="33" fill="url(#paint0_linear_2124_11)" />
-              <mask id="path-2-inside-1_2124_11" fill="white">
-                <rect x="17" y="24" width="6" height="6" rx="1" />
-              </mask>
-              <rect x="17" y="24" width="6" height="6" rx="1" stroke="white" stroke-width="2.2"
-                mask="url(#path-2-inside-1_2124_11)" />
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M28.027 16.7682H34.027V20.2682V21.2682C33.527 22.0182 33.4382 22.1514 33.027 22.7682H32.027H28.027V16.7682ZM32.027 23.7682H28.027C27.4747 23.7682 27.027 23.3205 27.027 22.7682V16.7682C27.027 16.2159 27.4747 15.7682 28.027 15.7682H34.027C34.5793 15.7682 35.027 16.2159 35.027 16.7682V20.2682H42.027C42.5793 20.2682 43.027 20.7159 43.027 21.2682V30.2682C43.027 30.8205 42.5793 31.2682 42.027 31.2682H33.027C32.4747 31.2682 32.027 30.8205 32.027 30.2682V23.7682ZM35.027 21.2682H42.027V30.2682H33.027L33.027 23.7682V22.7682C33.5 22.0587 33.527 22.0182 34.027 21.2682H35.027Z"
-                fill="white" />
-              <path
-                d="M34.5 31C44.5 31 42.742 32.5 42.742 23H47.7358C48.3811 23 48.8575 23.6023 48.7089 24.2303L41.6107 54.2303C41.5039 54.6814 41.1011 55 40.6375 55H30.2615C29.617 55 29.1408 54.3993 29.2878 53.7718L34.5 31Z"
-                fill="white" />
-              <path
-                d="M18 11.55H22C22.2485 11.55 22.45 11.7515 22.45 12V16C22.45 16.2485 22.2485 16.45 22 16.45H18C17.7515 16.45 17.55 16.2485 17.55 16V12C17.55 11.7515 17.7515 11.55 18 11.55Z"
-                stroke="white" stroke-width="1.1" />
-              <defs>
-                <linearGradient id="paint0_linear_2124_11" x1="2.05455e-07" y1="24.5" x2="63" y2="48"
-                  gradientUnits="userSpaceOnUse">
-                  <stop offset="0.146155" stop-color="#022E80" />
-                  <stop offset="1" stop-color="#4B95B0" />
-                </linearGradient>
-              </defs>
-            </svg>  
-            <h3>Segunda via do boleto</h3>
-            <button id="close-modal">Fechar</button>
-          </div>
-          <div class="modal-body">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, veniam non ad ea voluptas laboriosam molestias error est cumque tenetur libero officiis iure expedita. Aut distinctio dolorum molestiae sed veniam.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione odio necessitatibus omnis, odit quibusdam cumque nobis officia quis ipsa quasi, ullam consequatur possimus unde! Doloremque repudiandae a deserunt itaque amet.</p>
-          </div>
-        </div>
 
         <a class="button suporte" target="_blank" href="./assets/downloads/InforsysSuporte.exe">Suporte</a>
 
@@ -559,6 +523,68 @@
       <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </a>
+
+  <!-- Tela Modal do Boleto -->
+  <div id="fadel" ></div>
+  <div id="modal" >
+    <div class="modal-header">
+      <button id="close-modal">X</button>
+      <svg class="logo-inforsys" width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="33" cy="33" r="33" fill="url(#paint0_linear_2124_11)" />
+        <mask id="path-2-inside-1_2124_11" fill="white">
+          <rect x="17" y="24" width="6" height="6" rx="1" />
+        </mask>
+        <rect x="17" y="24" width="6" height="6" rx="1" stroke="white" stroke-width="2.2"
+          mask="url(#path-2-inside-1_2124_11)" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M28.027 16.7682H34.027V20.2682V21.2682C33.527 22.0182 33.4382 22.1514 33.027 22.7682H32.027H28.027V16.7682ZM32.027 23.7682H28.027C27.4747 23.7682 27.027 23.3205 27.027 22.7682V16.7682C27.027 16.2159 27.4747 15.7682 28.027 15.7682H34.027C34.5793 15.7682 35.027 16.2159 35.027 16.7682V20.2682H42.027C42.5793 20.2682 43.027 20.7159 43.027 21.2682V30.2682C43.027 30.8205 42.5793 31.2682 42.027 31.2682H33.027C32.4747 31.2682 32.027 30.8205 32.027 30.2682V23.7682ZM35.027 21.2682H42.027V30.2682H33.027L33.027 23.7682V22.7682C33.5 22.0587 33.527 22.0182 34.027 21.2682H35.027Z"
+          fill="white" />
+        <path
+          d="M34.5 31C44.5 31 42.742 32.5 42.742 23H47.7358C48.3811 23 48.8575 23.6023 48.7089 24.2303L41.6107 54.2303C41.5039 54.6814 41.1011 55 40.6375 55H30.2615C29.617 55 29.1408 54.3993 29.2878 53.7718L34.5 31Z"
+          fill="white" />
+        <path
+          d="M18 11.55H22C22.2485 11.55 22.45 11.7515 22.45 12V16C22.45 16.2485 22.2485 16.45 22 16.45H18C17.7515 16.45 17.55 16.2485 17.55 16V12C17.55 11.7515 17.7515 11.55 18 11.55Z"
+          stroke="white" stroke-width="1.1" />
+        <defs>
+          <linearGradient id="paint0_linear_2124_11" x1="2.05455e-07" y1="24.5" x2="63" y2="48"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.146155" stop-color="#022E80" />
+            <stop offset="1" stop-color="#4B95B0" />
+          </linearGradient>
+        </defs>
+      </svg>  
+      <h3>Segunda via do boleto</h3>      
+    </div>
+    <hr>
+    <div class="modal-body">
+      <form action="" onsubmit="Form.submit(event)">
+        <div class="input-group">
+            <label class="sr-only" for="cpf">CPF/CNPJ</label>
+            <input type="number" step="0.01" id="cpf" name="cpf" placeholder="CPF/CNPJ">
+        </div>
+        <div class="input-group">
+            <label class="sr-only" for="date">Data</label>
+            <input type="date" id="date" name="date">                        
+        </div>
+
+        <button class="button">Buscar</button>    
+
+        <table id="data-table">
+          <thead>
+              <tr>
+                  <th>Contrato</th>
+                  <th>Vencimento</th>
+                  <th>Valor</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Incremetacao da tabela pelo JavaScript -->
+          </tbody>
+        </table>
+    </form>
+    </div>
+  </div>  
 
   <!-- ScrollReaveal Lib -->
   <script src="https://unpkg.com/scrollreveal"></script>
