@@ -119,14 +119,16 @@ const anoAtual = new Date();
 ano.innerHTML = anoAtual.getFullYear();
 
 // Modal Boleto
-const btnBoleto = document.querySelector(".boleto")
-const modal = document.querySelector("dialog")
-const btnClose = document.querySelector("dialog .closeModal")
+const openModalButton = document.querySelector("#open-modal")
+const closeModalButton = document.querySelector("#close-modal")
+const modal = document.querySelector("#modal")
+const fadel = document.querySelector("#fadel")
 
-btnBoleto.onclick = function() {  
-  modal.showModal()
+const toggleModal = () => {
+  modal.classList.toggle("hide")
+  fadel.classList.toggle("hide")
 }
 
-btnClose.onclick = function() {
-  modal.close()
-}
+[openModalButton, closeModalButton, fadel].forEach((el) => {
+  el.addEventListener("click", () => toggleModal())
+})
