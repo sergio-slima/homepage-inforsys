@@ -1028,20 +1028,28 @@ footer .social-links {
 
   /* FOOTER */
   footer {
-    padding-block: 8rem;
+    padding-block: 10rem;
   }
 
   footer .wrapper {
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    grid-template-row: 1fr 1fr;
     grid-template-areas: "A B";
   }
 
   footer .col-a {
-    align-self: center;
+    display: flex;
+    justify-content: space-between;
   }
 
   footer .col-b {
+    display: flex;
     align-self: center;
     justify-self: flex-end;
+  }
+
+  footer hr {
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
