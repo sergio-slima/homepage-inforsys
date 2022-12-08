@@ -534,65 +534,35 @@ body.menu-expanded nav#navigation .menu a.button.suporte {
 
 /* ==== FOOTER ======================= */
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-block: 3rem;
   background-color: var(--bg-footer);
-  padding-block: 6rem;
-
-  align-items: flex-start;
   color: white;
-
-  column-gap: 57px;
-  row-gap: 57px;
-  width: 100%;
 }
 
 footer a {
   text-decoration: none;
+  color: var(--brand-light-2);
 }
 
-footer .about{
+footer .about {
   display: flex;
   align-items: flex-start;
-  /* flex-direction: column; */
-  width: 100%;
 }
 
-footer .logo {
-  display: inline-block;
-  margin-bottom: 2.4rem;
+footer .about-stack {
+  text-align: left;
+  margin-right: 2rem;
 }
 
-footer .logo .logo-inforsys {
-  width: 5rem;
-  height: 5rem;
-}
-
-footer .logo .name-inforsys {
-  width: 20rem;
-  height: 4rem;
-}
-
-footer .logo path {
-  fill: white;
-}
-
-footer h2 {
-  display: block;
+footer h3 {
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
-  font-weight: 700;
-  font-size: 14px;
+  text-align: left;
 }
 
 footer p {
   display: block;
   color: var(--brand-beige-2);
-  line-height: 2;
-
-  width: 302px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 footer .navegue {
@@ -609,21 +579,20 @@ footer .contato-stack {
   flex-direction: column;
 }
 
-footer .navegue-stack a,
-footer .suporte-stack a,
-footer .suporte-plano a,
-footer .contato-stack a {
-  cursor: pointer;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  background-color: transparent;
-}
-
 footer .suporte,
 footer .contato {
   display: block;
   width: 100%;
+}
+
+footer .contato-stack a > svg {
+  vertical-align: middle;
+  width: 20px;
+  height: 21px;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: currentColor;
 }
 
 footer .social-links {
@@ -641,11 +610,37 @@ footer hr {
 
 footer .direitos {
   display: flex;
-  align-items: center;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  max-width: 1140px;
-  width: 100%;
+  align-items: center;
+}
+
+footer .direitos p {
+  text-align: left;
+  font-size: 12px;
+}
+
+footer .logo .logo-inforsys {
+  width: auto;
+  height: 4rem;
+}
+
+footer .logo .name-inforsys {
+  width: auto;
+  height: 3rem;
+}
+
+footer .direitos .logo .logo-inforsys {
+  width: auto;
+  height: 2.5rem;
+}
+
+footer .direitos .logo .name-inforsys {
+  width: auto;
+  height: 2rem;
+}
+
+footer .logo path {
+  fill: white;
 }
 
 /* MODAL */
@@ -1101,7 +1096,6 @@ hr {
 
   /* FOOTER */
   footer {
-    padding-block: 10rem;
+    padding-block: 3rem;
   }
-
 }
