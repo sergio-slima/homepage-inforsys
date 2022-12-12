@@ -119,16 +119,31 @@ const anoAtual = new Date();
 ano.innerHTML = anoAtual.getFullYear();
 
 // Modal Boleto
-const openModalButton = document.querySelector("#open-modal")
-const closeModalButton = document.querySelector("#close-modal")
-const modal = document.querySelector("#modal")
-const fadel = document.querySelector("#fadel")
+const closeModalButtonBoleto = document.querySelector("#close-modal-boleto")
+const openModalButtonBoleto = document.querySelector("#open-modal-boleto")
+const modalBoleto = document.querySelector("#modal-boleto")
+const fadelBoleto = document.querySelector("#fadel-boleto")
 
-const toggleModal = () => {
-  modal.classList.toggle("hide")
-  fadel.classList.toggle("hide")
+const toggleModalBoleto = () => {
+  modalBoleto.classList.toggle("hide")
+  fadelBoleto.classList.toggle("hide")
 }
 
-[openModalButton, closeModalButton, fadel].forEach((el) => {
-  el.addEventListener("click", () => toggleModal())
+[openModalButtonBoleto, closeModalButtonBoleto, fadelBoleto].forEach((el) => {
+  el.addEventListener("click", () => toggleModalBoleto())
+})
+
+// Modal Boleto
+const closeModalButtonSuporte = document.querySelector("#close-modal-suporte")
+const openModalButtonSuporte = document.querySelector("#open-modal-suporte")
+const modalSuporte = document.querySelector("#modal-suporte")
+const fadelSuporte = document.querySelector("#fadel-suporte")
+
+const toggleModalSuporte = () => {
+  modalSuporte.classList.toggle("hide")
+  fadelSuporte.classList.toggle("hide")
+}
+
+[openModalButtonSuporte, closeModalButtonSuporte, fadelSuporte].forEach((el) => {
+  el.addEventListener("click", () => toggleModalSuporte())
 })

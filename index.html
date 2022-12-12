@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="shortcut icon" href="./assets/icons/Inforsys.ico" type="image/x-icon">
   <title>InforSys</title>
 
@@ -78,9 +79,9 @@
           <li><a onclick="closeMenu()" href="#contact">Contato</a></li>
         </ul>
 
-        <a class="button boleto" id="open-modal" onclick="closeMenu()">Boleto</a>
+        <a class="button boleto" id="open-modal-boleto" onclick="closeMenu()">Boleto</a>
 
-        <a class="button suporte" target="_blank" href="./assets/downloads/InforsysSuporte.exe">Suporte</a>
+        <a class="button suporte" id="open-modal-suporte" onclick="closeMenu()">Suporte</a>
 
         <button type="button" class="btn btn-sm btn-dark" onclick="mostrar(this); closeMenu()">
           <svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -470,13 +471,8 @@
             </svg>
           </a>
           <h3>Sobre a Inforsys</h3>
-          <p>Atuamos há mais de 20 anos no mercado de
-            Automação Comercial com clientes nos estados do Norte e Nordeste
-            do Brasil, temos como principal objetivo criar soluções inovadoras
-            que ajudam a total integração entre diversos setores da sua
-            empresa, auxiliando os gestores terem as principais informações
-            gerenciais para momentos de tomada de decisão, possibilitando
-            assim maior competitividade no seu segmento de mercado.</p>
+          <p>Há 20 anos proporcionando as melhores soluções
+            e simplificando a vida de pessoas por meio da tecnologia.</p>
         </div>
 
         <div class="navegue">
@@ -622,6 +618,12 @@
     </div>
   </footer>
 
+  <div id="chat">
+    <svg class="b24-crm-button-icon b24-crm-button-icon-active" width="28" height="29" xmlns="http://www.w3.org/2000/svg">
+      <path class="b24-crm-button-chat-icon" d="M25.99 7.744a2 2 0 012 2v11.49a2 2 0 01-2 2h-1.044v5.162l-4.752-5.163h-7.503a2 2 0 01-2-2v-1.872h10.073a3 3 0 003-3V7.744zM19.381 0a2 2 0 012 2v12.78a2 2 0 01-2 2h-8.69l-5.94 6.453V16.78H2a2 2 0 01-2-2V2a2 2 0 012-2h17.382z" fill=" #FFFFFF" fill-rule="evenodd"></path>
+    </svg>
+  </div>
+
   <a id="backToTopButton" href="#home">
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="20" cy="20" r="20" fill="#00856F" />
@@ -630,11 +632,11 @@
     </svg>
   </a>
 
-  <!-- Tela Modal do Boleto -->
-  <div id="fadel" class="hide"></div>
-  <div id="modal" class="hide">
+  <!-- Modal Boleto -->
+  <div id="fadel-boleto" class="hide"></div>
+  <div id="modal-boleto" class="hide">
     <div class="modal-header">
-      <button id="close-modal">X</button>
+      <button id="close-modal-boleto"></button>
       <svg class="logo-inforsys" width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="33" cy="33" r="33" fill="url(#paint0_linear_2124_11)" />
         <mask id="path-2-inside-1_2124_11" fill="white">
@@ -689,6 +691,74 @@
           </tbody>
         </table>
     </form>
+    </div>
+  </div>  
+  <!-- Modal Suporte -->
+  <div id="fadel-suporte" class="hide"></div>
+  <div id="modal-suporte" class="hide">
+    <div class="modal-header">
+      <button id="close-modal-suporte"></button>
+      <svg class="logo-inforsys" width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="33" cy="33" r="33" fill="url(#paint0_linear_2124_11)" />
+        <mask id="path-2-inside-1_2124_11" fill="white">
+          <rect x="17" y="24" width="6" height="6" rx="1" />
+        </mask>
+        <rect x="17" y="24" width="6" height="6" rx="1" stroke="white" stroke-width="2.2"
+          mask="url(#path-2-inside-1_2124_11)" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M28.027 16.7682H34.027V20.2682V21.2682C33.527 22.0182 33.4382 22.1514 33.027 22.7682H32.027H28.027V16.7682ZM32.027 23.7682H28.027C27.4747 23.7682 27.027 23.3205 27.027 22.7682V16.7682C27.027 16.2159 27.4747 15.7682 28.027 15.7682H34.027C34.5793 15.7682 35.027 16.2159 35.027 16.7682V20.2682H42.027C42.5793 20.2682 43.027 20.7159 43.027 21.2682V30.2682C43.027 30.8205 42.5793 31.2682 42.027 31.2682H33.027C32.4747 31.2682 32.027 30.8205 32.027 30.2682V23.7682ZM35.027 21.2682H42.027V30.2682H33.027L33.027 23.7682V22.7682C33.5 22.0587 33.527 22.0182 34.027 21.2682H35.027Z"
+          fill="white" />
+        <path
+          d="M34.5 31C44.5 31 42.742 32.5 42.742 23H47.7358C48.3811 23 48.8575 23.6023 48.7089 24.2303L41.6107 54.2303C41.5039 54.6814 41.1011 55 40.6375 55H30.2615C29.617 55 29.1408 54.3993 29.2878 53.7718L34.5 31Z"
+          fill="white" />
+        <path
+          d="M18 11.55H22C22.2485 11.55 22.45 11.7515 22.45 12V16C22.45 16.2485 22.2485 16.45 22 16.45H18C17.7515 16.45 17.55 16.2485 17.55 16V12C17.55 11.7515 17.7515 11.55 18 11.55Z"
+          stroke="white" stroke-width="1.1" />
+        <defs>
+          <linearGradient id="paint0_linear_2124_11" x1="2.05455e-07" y1="24.5" x2="63" y2="48"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.146155" stop-color="#022E80" />
+            <stop offset="1" stop-color="#4B95B0" />
+          </linearGradient>
+        </defs>
+      </svg>  
+      <h3>Suporte Inforsys</h3>      
+    </div>
+    <hr>
+    <div class="modal-body">
+      <!-- <form action="" onsubmit="Form.submit(event)" name="channel5430464" action="https://secure.logmeinrescue.com/Customer/Download.aspx" method="post">
+        <div class="input-group">
+            <label class="sr-only">Nome da Empresa</label>
+            <input type="text" name="name" placeholder="Empresa" maxlength="64">
+        </div>
+        <div class="input-group">
+            <label class="sr-only">Nome do Usuário</label>
+            <input type="text" name="comment1" placeholder="Usuário" maxlength="64">                        
+        </div>
+        <div class="input-group">
+          <label class="sr-only">Descrição do Problema</label>
+          <input type="text" name="comment2" placeholder="Descrição do Problema" maxlength="512">                        
+        </div>
+
+        <button class="button" type="submit" value="Channel 01">Buscar</button> 
+        <input type="submit" value="Channel 01" /> 
+        <input type="hidden" name="EntryID" value="5430464" />
+        <input type="hidden" name="tracking0" maxlength="64" />
+        <input type="hidden" name="language" maxlength="5" />  
+
+      </form> -->
+
+      <form name="channel5430464" action="https://secure.logmeinrescue.com/Customer/Download.aspx" method="post">
+        <table>
+            <tr><td>Empresa: </td><td><input type="text" name="name" maxlength="64" /></td></tr>
+            <tr><td>Usuário: </td><td><input type="text" name="comment1" maxlength="64" /></td></tr>
+            <tr><td>Descrição do Problema: </td><td><input type="text" name="comment2" maxlength="512" /></td></tr>          
+        </table>
+        <input class="button" type="submit" value="Solicitar Suporte" />
+        <input type="hidden" name="EntryID" value="5430464" />
+        <input type="hidden" name="tracking0" maxlength="64" /> <!-- optional -->
+        <input type="hidden" name="language" maxlength="5" /> <!-- optional -->
+      </form>
     </div>
   </div>  
 

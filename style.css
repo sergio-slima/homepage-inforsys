@@ -552,6 +552,7 @@ footer .about {
 footer .about-stack {
   text-align: left;
   margin-right: 2rem;
+  width: 190%;
 }
 
 footer h3 {
@@ -644,7 +645,8 @@ footer .logo path {
 }
 
 /* MODAL */
-#modal {
+#modal-boleto,
+#modal-suporte {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -661,7 +663,8 @@ footer .logo path {
   z-index: 10;
 }
 
-#fadel {
+#fadel-boleto,
+#fadel-suporte {
   position: fixed;
   top: 0;
   left: 0;
@@ -671,14 +674,17 @@ footer .logo path {
   z-index: 5;
 }
 
-#fadel,
-#modal {
+#fadel-boleto,
+#fadel-suporte,
+#modal-boleto,
+#modal-suporte {
   transition: 0.5s;
   opacity: 1;
   pointer-events: all;
 }
 
-#close-modal {
+#close-modal-boleto,
+#close-modal-suporte {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -693,17 +699,21 @@ footer .logo path {
   margin-bottom: 1rem;
 }
 
-#modal.hide,
-#fadel.hide {
+#modal-boleto.hide,
+#modal-suporte.hide,
+#fadel-boleto.hide,
+#fadel-suporte.hide {
   opacity: 0;
   pointer-events: none;
 }
 
-#modal.hide {
+#modal-boleto.hide,
+#modal-suporte.hide {
   top: 0;
 }
 
-#modal .button {
+#modal-boleto .button,
+#modal-suporte .button {
   display: inline-flex;
   width: 100%;
   height: 4rem;
@@ -712,7 +722,7 @@ footer .logo path {
   cursor: pointer;
 }
 
-#modal table {
+#modal-boleto table {
   display: block;
   width: 100%;
   overflow-x: auto;
@@ -788,10 +798,27 @@ hr {
   color: #747474;
 }
 
+/* ==== CHAT ONLINE ======================= */
+#chat {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 1;
+  visibility: visible;
+  border: 12px solid var(--primary-color);
+  border-radius: 5rem;
+  background-color: var(--primary-color);
+
+  cursor: pointer;
+}
+
 /* ==== BACK TO TOP ======================= */
 #backToTopButton {
   position: fixed;
-  bottom: 1rem;
+  bottom: 7rem;
   right: 2.5rem;
 
   opacity: 0;
