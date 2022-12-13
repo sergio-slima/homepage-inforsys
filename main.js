@@ -133,7 +133,7 @@ const toggleModalBoleto = () => {
   el.addEventListener("click", () => toggleModalBoleto())
 })
 
-// Modal Boleto
+// Modal Suporte
 const closeModalButtonSuporte = document.querySelector("#close-modal-suporte")
 const openModalButtonSuporte = document.querySelector("#open-modal-suporte")
 const modalSuporte = document.querySelector("#modal-suporte")
@@ -147,3 +147,38 @@ const toggleModalSuporte = () => {
 [openModalButtonSuporte, closeModalButtonSuporte, fadelSuporte].forEach((el) => {
   el.addEventListener("click", () => toggleModalSuporte())
 })
+
+// Modal Chat
+const closeModalButtonChat = document.querySelector("#close-modal-chat")
+const openModalButtonChat = document.querySelector("#open-modal-chat")
+const modalChat = document.querySelector("#modal-chat")
+const fadelChat = document.querySelector("#fadel-chat")
+
+const toggleModalChat = () => {
+  modalChat.classList.toggle("hide")
+  fadelChat.classList.toggle("hide")
+}
+
+[openModalButtonChat, closeModalButtonChat, fadelChat].forEach((el) => {
+  el.addEventListener("click", () => toggleModalChat())
+})
+
+// BATE PAPO
+function loadInstantChat(){
+  var ICLoader = new RescueInstantChatLoader();
+  ICLoader.ICContainer = "ICContainer";
+  ICLoader.HostedCSS = "https://secure.logmeinrescue.com/InstantChat/Standard/InstantChat.css";
+  ICLoader.HostedLanguagesForChatOnlyMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForChatOnlyMode.js";
+  ICLoader.HostedLanguagesForAppletMode = "https://secure.logmeinrescue.com/InstantChat/LanguagesForAppletMode.js";
+  ICLoader.EntryID = "5430464";
+  ICLoader.Name = document.getElementById("Name").value; /* optional */
+  ICLoader.Comment1 = document.getElementById("Comment1").value; /* optional */
+  ICLoader.Tracking0 = ""; /* optional */
+  ICLoader.Language = ""; /* optional */
+  ICLoader.PostMessageTargetOrigin = ""; /* optional (For implementation details, see the LogMeIn Rescue Customization and Integration Guide) */
+  ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+  ICLoader.Start();}
+function handleRebootOrRefresh(){
+  if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+  if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+}
