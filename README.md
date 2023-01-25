@@ -1,7 +1,7 @@
 <h1 align="center"> HomePage | Inforsys </h1>
 
 <p align="center">
-Página institucional da Inforsys, um site para manter um canal de contato com todos os clientes.
+Página institucional da Empresa Inforsys, um site para manter um canal de contato com todos os clientes.
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@ Página institucional da Inforsys, um site para manter um canal de contato com t
 <br>
 
 <p align="center">
-  <img alt="Logo da Inforsys" src="./downloads/logo-inforsys/Inforsys01.png" width="30%">
+  <img alt="Logo da Inforsys" src="./assets/downloads/logo-inforsys/Inforsys01.png" width="30%">
 </p>
 
 ## 🚀 Tecnologias
